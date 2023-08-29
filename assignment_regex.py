@@ -17,8 +17,8 @@ for line in fhandle:
     words = line.rstrip()
     x = re.findall('[0-9]+', words)
     all_digits_str += x
-for val in all_digits_str:
-    val = int(val)
-    all_digits.append(val)
+    for val in all_digits_str:
+        val = int(val)
+        all_digits.append(val)
     
-print(all_digits)
+print('The sum of all', len(all_digits), 'values in the sample data is:', sum(all_digits))
